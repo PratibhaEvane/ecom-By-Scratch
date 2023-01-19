@@ -2,19 +2,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
+import { SellerHomepageComponent } from './seller-homepage/seller-homepage.component';
 
 const routes: Routes = [{
     path: '',
     component: HomePageComponent,
   },
   {
-    path: 'seller-auth',
-    component: SellerAuthComponent,
+    path: 'seller',
+    component: SellerAuthComponent
   },
   {
-    path: 'seller-home',
-   
-  },];
+    path:'seller-homepage',component:SellerHomepageComponent
+  }
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
