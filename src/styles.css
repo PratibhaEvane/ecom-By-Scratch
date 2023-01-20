@@ -1,6 +1,7 @@
 body {
   margin: 0px;
 }
+
 .forms {
   display: flex;
   flex-direction: column;
@@ -8,11 +9,25 @@ body {
   margin: auto;
   box-shadow: 5px 5px 5px gray;
 }
+
 .form-input {
   margin-top: 7px;
   height: 40px;
 }
+
 .form-button {
   font-weight: bold;
   font-size: 15px;
+}
+
+.account-link {
+  margin: auto;
+  height: 20px;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.account-link a {
+  color: black;
+  margin-left: 5px;
 }
