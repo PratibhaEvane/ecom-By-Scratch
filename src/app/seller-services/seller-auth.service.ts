@@ -21,7 +21,7 @@ export class SellerAuthService {
       if (result) {
         this.is_seller_signedup.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body))
-        this.route.navigate(['seller-homepage'])
+        this.route.navigate(['seller-home'])
 
       } else {
         this.show_message.emit(true)

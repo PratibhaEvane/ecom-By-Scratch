@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerHomepageComponent } from './seller-homepage/seller-homepage.component';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SellerHomepageComponent } from './seller-homepage/seller-homepage.compo
     HomePageComponent,
     SellerAuthComponent,
     SellerHomepageComponent,
+    SellerAddProductComponent,
   ],
   imports: [
     BrowserModule,

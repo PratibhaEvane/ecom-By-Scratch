@@ -1,0 +1,13 @@
+<!-- this form is for add product from seller -->
+<div class="addProduct">
+    <h1 style="text-align: center;">Add Product Here</h1>
+    <h5 style="text-align: center; color: red;"> </h5>
+    <form class="forms" #productAddForm="ngForm">
+        <input type="text" class="form-input" name="productname" placeholder="enter product name" ngModel>
+        <input type="text" class="form-input" name="category" placeholder="add category" ngModel>
+        <input type="text" class="form-input" name="price" placeholder="Product Price" ngModel>
+        <input type="file" class="form-input" name="image" placeholder="Product Price" ngModel>
+        <button class="form-input form-button" (click)="addProduct(productAddForm.value)">Add</button>
+        <button class="form-input form-button">Reset</button>
+    </form>
+</div>

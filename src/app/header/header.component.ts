@@ -7,26 +7,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  menuUrlType: string = ''
+  navUrlType: string = ''
+  seller_name: string = ''
   constructor(private route: Router) { }
-  // 
+  // this will change the navbar on url changes
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
-      console.log(val.url)
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.warn('in seller area')
-          this.menuUrlType = 'seller'
+          this.navUrlType = 'seller'
+          if (localStorage.getItem('seller')) {
+            let localStorageData = localStorage.getItem('seller');
+            let seller_data = localStorageData && JSON.parse(localStorageData)[0];
+            this.seller_name = seller_data.username
+          }
         }
         else {
-          console.log('outside the seller area')
-          this.menuUrlType = 'default'
-
+          this.navUrlType = 'default'
         }
       }
     })
   }
-
-
-
 }
