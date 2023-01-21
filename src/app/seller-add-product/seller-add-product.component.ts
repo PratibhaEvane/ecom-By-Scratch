@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { resetFakeAsyncZone } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
 import { product } from '../data-type';
-import { SellerAuthService } from '../seller-services/seller-auth.service';
 import { SellerProductsService } from '../seller-services/seller-products.service';
 
 @Component({
@@ -9,9 +7,13 @@ import { SellerProductsService } from '../seller-services/seller-products.servic
   templateUrl: './seller-add-product.component.html',
   styleUrls: ['./seller-add-product.component.css']
 })
-export class SellerAddProductComponent {
+export class SellerAddProductComponent implements OnInit {
   message = ''
   constructor(private service: SellerProductsService) { }
+
+  ngOnInit(): void {
+
+  }
 
   addProduct(productData: product) {
     console.log(productData)

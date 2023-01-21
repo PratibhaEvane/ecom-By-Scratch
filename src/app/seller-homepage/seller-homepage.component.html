@@ -1,1 +1,54 @@
-<p>seller-homepage works!</p>
+<div class="container text-center" *ngFor="let list of product_list">
+    <div class="row justify-content-start">
+        <div class="col-4">
+            <div class="product_name">
+                {{list.productname}}
+            </div>
+            <div class="price">{{list.price}}</div>
+            <div class="category">{{list.category}}</div>
+        </div>
+        <div class="col-4">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            One of two columns
+        </div>
+        <div class="col-4">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-4">
+            One of two columns
+        </div>
+        <div class="col-4">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-4">
+            One of two columns
+        </div>
+        <div class="col-4">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-4">
+            One of two columns
+        </div>
+        <div class="col-4">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-evenly">
+        <div class="col-4">
+            One of two columns
+        </div>
+        <div class="col-4">
+            One of two columns
+        </div>
+    </div>
+</div>
