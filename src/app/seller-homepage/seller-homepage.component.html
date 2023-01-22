@@ -16,9 +16,11 @@
                     Action
                 </button>
                 <ul class="dropdown-menu">
-                    <li><button (click)="openUpdatePage()">
-                            <a class="dropdown-item">Edit</a>
+                    <li><button>
+                            <a class="dropdown-item" routerLink="/seller-update-product/{{list.id}}">Edit</a>
+
                         </button>
+
                     </li>
                     <li><button (click)="delete(list.id)">
                             <a class="dropdown-item">Delete <fa-icon [icon]="icon"></fa-icon></a>

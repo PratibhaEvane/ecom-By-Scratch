@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { product } from '../data-type';
+import { Product } from '../data-type';
 import { SellerProductsService } from '../seller-services/seller-products.service';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class SellerHomepageComponent implements OnInit {
 
-  product_list: undefined | product[]
+  product_list: undefined | Product[]
   icon = faTrash
   constructor(private service: SellerProductsService, private route: Router) {
 
@@ -25,13 +25,11 @@ export class SellerHomepageComponent implements OnInit {
   }
   delete(id: number) {
     this.service.deleteProductFromApi(id).subscribe((result) => {
-      console.log(result, "delted")
+      console.log(result, "deleted")
     })
     window.location.reload();
 
   }
-  openUpdatePage() {
-    this.route.navigate(['seller-update-product/{{list.id}}'])
-  }
+
 
 }
