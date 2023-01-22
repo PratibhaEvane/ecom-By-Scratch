@@ -35,3 +35,54 @@ body {
   color: black;
   margin-left: 5px;
 }
+
+.sidebar {
+  border: solid 1px red;
+  display: flex;
+  float: left;
+  width: 20%;
+  height: 1000px;
+}
+
+.product-container {
+  border: solid 1px brown;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 79.8%;
+}
+
+.product-list {
+  border: solid 1px yellow;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  height: 300px;
+}
+
+.img {
+  border: solid 1px green;
+  height: 200px;
+  width: 200px;
+}
+
+.product-name {
+  border: solid 1px pink;
+  height: 50px;
+  width: 200px;
+  padding-left: 5px;
+}
+
+.product-price {
+  border: solid 1px blue;
+  height: 50px;
+  width: 200px;
+  padding-left: 5px;
+}
+
+.action button {
+  border: solid 1px orange;
+  height: 40px;
+  width: 200px;
+  font-weight: bold;
+}

@@ -1,54 +1,32 @@
-<div class="container text-center" *ngFor="let list of product_list">
-    <div class="row justify-content-start">
-        <div class="col-4">
-            <div class="product_name">
-                {{list.productname}}
+<div class="sidebar">
+    <!-- <ul *ngFor="let list of product_list">
+        <li> {{list.category}}
+        </li>
+    </ul> -->
+</div>
+<div class="product-container">
+    <div class="product-list" *ngFor="let list of product_list">
+        <div class="img">
+            Image </div>
+        <div class="product-name">{{list.productname}} </div>
+        <div class="product-price">{{list.price}} </div>
+        <div class="action ">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Action
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button>
+                            <a class="dropdown-item" href="#">Edit</a>
+                        </button>
+                    </li>
+                    <li><button (click)="delete(list.id)">
+                            <a class="dropdown-item">Delete <fa-icon [icon]="icon"></fa-icon></a>
+
+                        </button></li>
+                </ul>
             </div>
-            <div class="price">{{list.price}}</div>
-            <div class="category">{{list.category}}</div>
         </div>
-        <div class="col-4">
-            One of two columns
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-4">
-            One of two columns
-        </div>
-        <div class="col-4">
-            One of two columns
-        </div>
-    </div>
-    <div class="row justify-content-end">
-        <div class="col-4">
-            One of two columns
-        </div>
-        <div class="col-4">
-            One of two columns
-        </div>
-    </div>
-    <div class="row justify-content-around">
-        <div class="col-4">
-            One of two columns
-        </div>
-        <div class="col-4">
-            One of two columns
-        </div>
-    </div>
-    <div class="row justify-content-between">
-        <div class="col-4">
-            One of two columns
-        </div>
-        <div class="col-4">
-            One of two columns
-        </div>
-    </div>
-    <div class="row justify-content-evenly">
-        <div class="col-4">
-            One of two columns
-        </div>
-        <div class="col-4">
-            One of two columns
-        </div>
+
     </div>
 </div>

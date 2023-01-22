@@ -18,4 +18,9 @@ export class SellerProductsService {
   fetchProductDetails() {
     return this.http.get<product[]>(this.product_api)
   }
+  // below function is created to delete the product deatils from api
+  deleteProductFromApi(id: number) {
+    return this.http.delete(`http://localhost:3000/added_product/${id}`)
+  }
+
 }
