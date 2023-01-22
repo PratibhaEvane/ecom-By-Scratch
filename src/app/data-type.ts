@@ -10,6 +10,7 @@ export interface Login {
 
 }
 export interface product {
+    id: number
     category: string
     image: string
     price: string

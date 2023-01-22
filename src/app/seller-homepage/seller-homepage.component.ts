@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { product } from '../data-type';
 import { SellerProductsService } from '../seller-services/seller-products.service';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-seller-homepage',
@@ -10,6 +11,7 @@ import { SellerProductsService } from '../seller-services/seller-products.servic
 export class SellerHomepageComponent implements OnInit {
 
   product_list: undefined | product[]
+  icon = faTrash
   constructor(private service: SellerProductsService) {
 
   }
@@ -19,6 +21,13 @@ export class SellerHomepageComponent implements OnInit {
       console.log(data)
       this.product_list = data
     })
+  }
+  delete(id: number) {
+    this.service.deleteProductFromApi(id).subscribe((result) => {
+      console.log(result, "delted")
+    })
+    window.location.reload();
+
   }
 
 }
