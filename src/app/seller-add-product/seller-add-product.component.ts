@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { product } from '../data-type';
+import { Product } from '../data-type';
 import { SellerProductsService } from '../seller-services/seller-products.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class SellerAddProductComponent implements OnInit {
 
   }
 
-  addProduct(productData: product) {
+  addProduct(productData: Product) {
     console.log(productData)
     this.service.productAdded(productData).subscribe((data) => {
       if (data) {

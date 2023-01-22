@@ -11,6 +11,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerHomepageComponent } from './seller-homepage/seller-homepage.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerProductUpdateComponent } from './seller-product-update/seller-product-update.component';
 
 
 @NgModule({
@@ -21,12 +23,14 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     SellerAuthComponent,
     SellerHomepageComponent,
     SellerAddProductComponent,
+    SellerProductUpdateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
     
   ],
   providers: [],

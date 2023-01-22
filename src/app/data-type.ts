@@ -9,7 +9,7 @@ export interface Login {
     password: string
 
 }
-export interface product {
+export interface Product {
     id: number
     category: string
     image: string
