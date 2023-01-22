@@ -1,7 +1,7 @@
 <!-- this form is for add product from seller -->
 <div class="addProduct">
     <h2 style="text-align: center;">Update Product Here</h2>
-    <!-- <h5 style="text-align: center; color: green;"> {{message}} </h5> -->
+    <h5 style="text-align: center; color: green;"> {{message}} </h5>
     <form class="forms" #updateProductForm="ngForm">
         <input type="text" class="form-input" name="productname" placeholder="enter product name"
             ngModel="{{recievied_product_data_from_api?.productname}}">

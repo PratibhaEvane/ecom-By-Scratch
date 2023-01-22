@@ -22,8 +22,12 @@ export class SellerProductsService {
   deleteProductFromApi(id: number) {
     return this.http.delete(`http://localhost:3000/added_product/${id}`)
   }
+  // below function is created to fetch the particuler product deatils from api
   getProductDetail(id: string) {
     return this.http.get<Product>(`http://localhost:3000/added_product/${id}`)
-
+  }
+  // below function is created to fetch the particuler product deatils from api
+  updateProductFromApi(data: Product) {
+    return this.http.put(`http://localhost:3000/added_product/${data.id}`, data)
   }
 }

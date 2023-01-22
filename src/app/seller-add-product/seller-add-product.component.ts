@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../data-type';
 import { SellerProductsService } from '../seller-services/seller-products.service';
 
@@ -9,7 +10,7 @@ import { SellerProductsService } from '../seller-services/seller-products.servic
 })
 export class SellerAddProductComponent implements OnInit {
   message = ''
-  constructor(private service: SellerProductsService) { }
+  constructor(private service: SellerProductsService, private route: Router) { }
 
   ngOnInit(): void {
 
@@ -25,5 +26,7 @@ export class SellerAddProductComponent implements OnInit {
       setTimeout(() => (this.message = ''), 3000)
 
     })
+    this.route.navigate(['seller-homepage'])
+
   }
 }

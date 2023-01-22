@@ -11,11 +11,12 @@ import { Product } from '../data-type';
 export class SellerProductUpdateComponent implements OnInit {
 
   recievied_product_data_from_api: undefined | Product
+  message = ''
 
-  constructor(private route: ActivatedRoute, private service: SellerProductsService) { }
+  constructor(private activeRoute: ActivatedRoute, private service: SellerProductsService, private route: Router) { }
 
   ngOnInit(): void {
-    let product_id = this.route.snapshot.paramMap.get('id')
+    let product_id = this.activeRoute.snapshot.paramMap.get('id')
     console.log(product_id)
     product_id && this.service.getProductDetail(product_id).subscribe((result) => {
       console.log(result)
@@ -25,5 +26,18 @@ export class SellerProductUpdateComponent implements OnInit {
 
 
 
-  updateProduct(data: any) { }
+  updateProduct(data: Product) {
+    if (this.recievied_product_data_from_api) {
+      data.id = this.recievied_product_data_from_api.id
+    }
+    this.service.updateProductFromApi(data).subscribe((result) => {
+      if (result) {
+        this.message = 'Product updated successfully'
+        this.route.navigate(['seller-homepage'])
+
+      }
+
+    })
+
+  }
 }
