@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from '../data-type';
+import { SearchBarService } from '../home-page-service/search-bar.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   navUrlType: string = ''
   seller_name: string = ''
-  constructor(private route: Router) { }
+  search_product_result: undefined | Product[]
+  constructor(private route: Router, private service: SearchBarService) { }
   // this will change the navbar on url changes
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
@@ -27,5 +30,18 @@ export class HeaderComponent implements OnInit {
         }
       }
     })
+  }
+  // function for product serach in navbar
+  searchProduct(e: KeyboardEvent) {
+    if (e) {
+      const element = e.target as HTMLInputElement
+      console.log(element.value)
+      this.service.product_search(element.value).subscribe((data) => {
+        this.search_product_result = data
+      })
+    }
+  }
+  blankSearchField() {
+    this.search_product_result = undefined
   }
 }

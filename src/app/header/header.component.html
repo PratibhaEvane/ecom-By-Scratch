@@ -1,10 +1,17 @@
 <div [ngSwitch]="navUrlType">
     <!-- this navbar will appear on default -->
     <nav class="nav-bar" *ngSwitchCase="'default'">
-        <h1 class="logo"><a routerLink="">eShop</a></h1>
+        <div class="logo"><a routerLink=""><img
+                    src="https://as1.ftcdn.net/v2/jpg/02/98/18/60/1000_F_298186090_Rimyxol4jsYvYbQg1i6sttQ5N3oebXgt.jpg"
+                    alt="eShop"></a></div>
         <div class="search-container">
-            <input type="text" placeholder="search product">
+            <input type="text" placeholder="search product" (keyup)="searchProduct($event)" (blur)="blankSearchField()">
             <button>Search</button>
+        </div>
+        <div class="search-products-list" *ngIf="search_product_result">
+            <ul *ngFor="let item of search_product_result">
+                <li>{{item.productname}}</li>
+            </ul>
         </div>
         <ul class="menu-item">
             <li><a routerLink="seller">sign in</a></li>
