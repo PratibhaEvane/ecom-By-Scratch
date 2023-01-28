@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
 }
