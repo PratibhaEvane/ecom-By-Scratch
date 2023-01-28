@@ -44,9 +44,9 @@ export class HeaderComponent implements OnInit {
   blankSearchField() {
     this.search_product_result = undefined
   }
-  // below function is created to open search page on searching navbar
+  // below function is created to open search page on product searching in navbar
   openSearch(val: string) {
     // console.log(val)
-    this.route.navigate([`search/:${val}`])
+    this.route.navigate([`search/${val}`])
   }
 }
