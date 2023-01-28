@@ -1,0 +1,34 @@
+<div class="sidebar">
+    <!-- <ul *ngFor="let list of product_list">
+        <li> {{list.category}}
+        </li>
+    </ul> -->
+</div>
+<div class="product-container">
+    <div class="product-list" *ngFor="let list of product_list">
+        <div class="img">
+            Image </div>
+        <div class="product-name">{{list.productname}} </div>
+        <div class="product-price">{{list.price}} </div>
+        <div class="action ">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Action
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button>
+                            <a class="dropdown-item" routerLink="/seller-update-product/{{list.id}}">Edit</a>
+
+                        </button>
+
+                    </li>
+                    <li><button (click)="delete(list.id)">
+                            <a class="dropdown-item">Delete <fa-icon [icon]="icon"></fa-icon></a>
+
+                        </button></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

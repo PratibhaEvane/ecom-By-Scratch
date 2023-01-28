@@ -1,12 +1,24 @@
-<nav class="nav-bar">
-    <h1 class="logo"><a routerLink="">eShop</a></h1>
-    <div class="search-container">
-        <input type="text" placeholder="search product">
-        <button>Search</button>
-    </div>
-    <ul class="menu-item">
-        <li><a routerLink="seller-auth">sign in</a></li>
-        <li>cart(0)</li>
-    </ul>
+<div [ngSwitch]="navUrlType">
+    <!-- this navbar will appear on default -->
+    <nav class="nav-bar" *ngSwitchCase="'default'">
+        <h1 class="logo"><a routerLink="">eShop</a></h1>
+        <div class="search-container">
+            <input type="text" placeholder="search product">
+            <button>Search</button>
+        </div>
+        <ul class="menu-item">
+            <li><a routerLink="seller">sign in</a></li>
+            <li>cart(0)</li>
+        </ul>
+    </nav>
 
-</nav>
+    <!-- this navbar will appear after seller login -->
+    <nav class="nav-bar" *ngSwitchCase="'seller'">
+        <h1 class="logo"><a routerLink="seller-homepage">eShop</a></h1>
+        <ul class="menu-item">
+            <li> <a routerLink="seller-add-product">Add Item</a> </li>
+            <li> {{seller_name |titlecase}} </li>
+            <li><a routerLink="">Logout</a></li>
+        </ul>
+    </nav>
+</div>
