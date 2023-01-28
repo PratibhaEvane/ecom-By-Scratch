@@ -4,11 +4,19 @@
   height: 90px;
   background-color: #5f4b8bff;
 }
+
 .logo {
   font-family: Trebuchet MS;
   font-size: 40px;
   margin: 5px;
+  padding-left: 20px;
 }
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
 .search-container {
   flex: 1;
   display: flex;
@@ -16,30 +24,49 @@
   margin-right: 5%;
   margin-top: 15px;
 }
+
 .search-container input {
   flex: 1;
   height: 40px;
   border: 1px black solid;
   border-right: none;
 }
+
 .search-container ::-webkit-input-placeholder {
   padding-left: 10px;
   font-size: 15px;
 }
+
 .search-container button {
   height: 44px;
   border: 1px black solid;
   border-left: none;
   font-weight: bold;
 }
+
+.search-products-list {
+  position: absolute;
+  top: 59px;
+  left: 193px;
+  background-color: white;
+  width: 1044px;
+  z-index: 10;
+}
+
+.search-products-list li {
+  list-style: none;
+}
+
 .menu-item {
   margin-top: 15px;
 }
+
 .menu-item li {
   display: inline;
   margin: 15px;
   font-size: 20px;
 }
+
 a {
   text-decoration: none;
   color: black;
