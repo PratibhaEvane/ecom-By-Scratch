@@ -7,14 +7,14 @@
     <h4>Filters</h4>
 </div>
 <div class="product-container">
-    <div class="product-list">
+    <div class="product-list" *ngFor="let list of display_search_product_results">
         <div class="img">
             Image </div>
-        <div class="product-name"> </div>
-        <div class="product-price"> </div>
+        <div class="product-name">{{list.productname}} </div>
+        <div class="product-price">{{list.price}} </div>
         <div class="action ">
             <button>
-                <a class="add-cart">Add to cart</a>
+                <a class="add-cart"> Add to cart</a>
 
             </button>
 
