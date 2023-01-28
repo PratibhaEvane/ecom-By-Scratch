@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
   searchProduct(e: KeyboardEvent) {
     if (e) {
       const element = e.target as HTMLInputElement
-      console.log(element.value)
+      // console.log(element.value)
       this.service.product_search(element.value).subscribe((data) => {
         this.search_product_result = data
       })
@@ -43,5 +43,10 @@ export class HeaderComponent implements OnInit {
   }
   blankSearchField() {
     this.search_product_result = undefined
+  }
+  // below function is created to open search page on searching navbar
+  openSearch(val: string) {
+    // console.log(val)
+    this.route.navigate([`search/:${val}`])
   }
 }

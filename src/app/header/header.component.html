@@ -5,8 +5,9 @@
                     src="https://as1.ftcdn.net/v2/jpg/02/98/18/60/1000_F_298186090_Rimyxol4jsYvYbQg1i6sttQ5N3oebXgt.jpg"
                     alt="eShop"></a></div>
         <div class="search-container">
-            <input type="text" placeholder="search product" (keyup)="searchProduct($event)" (blur)="blankSearchField()">
-            <button>Search</button>
+            <input type="text" placeholder="search product" #searchBox (keyup)="searchProduct($event)"
+                (blur)="blankSearchField()">
+            <button (click)="openSearch(searchBox.value)">Search</button>
         </div>
         <div class="search-products-list" *ngIf="search_product_result">
             <ul *ngFor="let item of search_product_result">

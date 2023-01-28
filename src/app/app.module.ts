@@ -12,6 +12,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerProductUpdateComponent } from './seller-product-update/seller-product-update.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SellerAuthComponent,
     SellerHomepageComponent,
     SellerAddProductComponent,
-    SellerProductUpdateComponent
+    SellerProductUpdateComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
