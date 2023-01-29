@@ -6,8 +6,9 @@
 </div>
 <div class="product-container">
     <div class="product-list" *ngFor="let list of product_list">
-        <div class="img">
-            Image </div>
+        <div class="product-img">
+            <img src="{{list.image}}" alt="">
+        </div>
         <div class="product-name">{{list.productname}} </div>
         <div class="product-price">{{list.price}} </div>
         <div class="action ">

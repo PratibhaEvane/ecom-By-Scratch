@@ -1,0 +1,16 @@
+<div class="product-detail-section" *ngIf="product_details">
+    <div class="detailed-image"><img src="{{product_details.image}}" alt="">
+        <div class="action-tab">
+            <div class="action-tab-item"><a>Add to cart</a> </div>
+            <div class="action-tab-item"><a>Buy Now</a> </div>
+        </div>
+    </div>
+    <div class="detailed-info">
+        <div class="name">
+            {{product_details.productname|titlecase}}
+        </div>
+        <div class="price">Price : {{product_details.price |currency:"INR":"symbol"}} </div>
+        <div class="ratings">rating</div>
+        <div class="detail">Product Details</div>
+    </div>
+</div>

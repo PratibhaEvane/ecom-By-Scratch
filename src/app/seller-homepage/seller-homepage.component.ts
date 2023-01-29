@@ -18,6 +18,7 @@ export class SellerHomepageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // fetch all product list from api via service
     this.service.fetchProductDetails().subscribe((data) => {
       console.log(data)
       this.product_list = data

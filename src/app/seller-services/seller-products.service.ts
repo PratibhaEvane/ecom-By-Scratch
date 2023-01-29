@@ -28,4 +28,5 @@ export class SellerProductsService {
     return this.http.get<Product>(`http://localhost:3000/added_product/${id}`)
 
   }
+
 }
