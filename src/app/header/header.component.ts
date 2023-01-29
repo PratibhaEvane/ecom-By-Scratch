@@ -49,4 +49,8 @@ export class HeaderComponent implements OnInit {
     // console.log(val)
     this.route.navigate([`search/${val}`])
   }
+  // below function is created to redirect the prouct detail page on select any product while product searhing in nav-bar
+  redirectToProductDetailPage(id: number) {
+    this.route.navigate(['/details/' + id])
+  }
 }

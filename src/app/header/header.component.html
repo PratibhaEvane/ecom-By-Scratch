@@ -11,7 +11,7 @@
         </div>
         <div class="search-products-list" *ngIf="search_product_result">
             <ul *ngFor="let item of search_product_result">
-                <li>{{item.productname}}</li>
+                <li (mousedown)="redirectToProductDetailPage(item.id)">{{item.productname}}</li>
             </ul>
         </div>
         <ul class="menu-item">
