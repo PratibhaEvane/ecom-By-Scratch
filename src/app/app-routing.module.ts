@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
@@ -30,9 +31,14 @@ const routes: Routes = [{
   path: 'seller-update-product/:id',
   component: SellerProductUpdateComponent,
   canActivate: [AuthGuard]
-}, {
+},
+{
   path: 'search/:query',
   component: SearchPageComponent
+},
+{
+  path: 'details/:productID',
+  component: ProductDetailsComponent
 }
 ];
 

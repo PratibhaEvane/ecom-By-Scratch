@@ -8,15 +8,15 @@
 </div>
 <div class="product-container">
     <div class="product-list" *ngFor="let list of display_search_product_results">
-        <div class="img">
-            Image </div>
-        <div class="product-name">{{list.productname}} </div>
+        <div class="product-img">
+            <a routerLink="/details/{{list.id}}"><img src="{{list.image}}" alt=""></a>
+        </div>
+        <div class="product-name"><a routerLink="/details/{{list.id}}">{{list.productname}}</a> </div>
         <div class="product-price">{{list.price}} </div>
         <div class="action ">
-            <button>
-                <a class="add-cart"> Add to cart</a>
+            <div><a routerLink="/details/{{list.id}}">View Details</a></div>
+            <div><a>Add to cart</a></div>
 
-            </button>
 
         </div>
 

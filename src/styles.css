@@ -60,7 +60,7 @@ body {
   height: 300px;
 }
 
-.img {
+.product-img img {
   border: solid 1px green;
   height: 200px;
   width: 200px;
@@ -85,4 +85,9 @@ body {
   height: 40px;
   width: 200px;
   font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

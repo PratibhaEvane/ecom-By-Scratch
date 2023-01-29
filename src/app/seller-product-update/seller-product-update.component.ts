@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { SellerProductsService } from '../seller-services/seller-products.service';
 import { Product } from '../data-type';
 
@@ -22,8 +22,5 @@ export class SellerProductUpdateComponent implements OnInit {
       this.recievied_product_data_from_api = result
     })
   }
-
-
-
   updateProduct(data: any) { }
 }
