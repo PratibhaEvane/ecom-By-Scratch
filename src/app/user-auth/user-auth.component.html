@@ -1,9 +1,9 @@
-<!-- this form is for seller login -->
+<!-- this form is for buyer/user login -->
 <div *ngIf="show_user_login_form" class="buyer-auth">
     <div class="signup">
         <h1 style="text-align: center;"> Login</h1>
         <!-- <h5 style="text-align: center;color: red;">{{show_msg}} </h5> -->
-        <form class="forms" #sellerLoginForm="ngForm" (ngSubmit)="buyerLoginup(sellerLoginForm.value)">
+        <form class="forms" #userLoginForm="ngForm" (ngSubmit)="userLogin(userLoginForm.value)">
             <input type="text" class="form-input" name="email" placeholder="enter your email" ngModel>
             <input type="text" class="form-input" name="password" placeholder="password" ngModel>
             <button class="form-input form-button">Login</button>
@@ -12,12 +12,12 @@
         </div> -->
     </div>
 </div>
-<!-- this form is for seller signup -->
-<!-- <div class="seller-auth">
-    <div *ngIf="!show_login_form" class="signup">
-        <h1 style="text-align: center;">Seller Signup</h1>
-        <h5 style="text-align: center; color: red;">{{show_msg}} </h5>
-        <form class="forms" #sellerSignupForm="ngForm" (ngSubmit)="sellerSignup(sellerSignupForm.value)">
+<!-- this form is for buyer/user signup -->
+<div class="seller-auth">
+    <div *ngIf="show_user_login_form" class="signup">
+        <h1 style="text-align: center;"> Signup</h1>
+        <!-- <h5 style="text-align: center; color: red;">{{show_msg}} </h5> -->
+        <form class="forms" #userSignupForm="ngForm" (ngSubmit)="userSignup(userSignupForm.value)">
             <input type="text" class="form-input" name="username" placeholder="enter name" ngModel>
             <input type="text" class="form-input" name="email" placeholder="enter your email" ngModel>
             <input type="text" class="form-input" name="phone" placeholder="enter mobile number" ngModel>
@@ -27,4 +27,4 @@
         <div class="account-link">already have account ?<span><a (click)="openLoginForm()">Login</a></span>
         </div>
     </div>
-</div> -->
+    <!-- </div> -->
