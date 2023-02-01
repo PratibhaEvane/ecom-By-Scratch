@@ -1,9 +1,11 @@
 <div [ngSwitch]="navUrlType">
     <!-- this navbar will appear on default -->
     <nav class="nav-bar" *ngSwitchCase="'default'">
-        <div class="logo"><a routerLink=""><img
+        <div class="logo"><a routerLink=""> eShop
+                <!-- <img
                     src="https://as1.ftcdn.net/v2/jpg/02/98/18/60/1000_F_298186090_Rimyxol4jsYvYbQg1i6sttQ5N3oebXgt.jpg"
-                    alt="eShop"></a></div>
+                    alt="eShop"> -->
+            </a></div>
         <div class="search-container">
             <input type="text" placeholder="search product" #searchBox (keyup)="searchProduct($event)"
                 (blur)="blankSearchField()">
@@ -14,19 +16,32 @@
                 <li (mousedown)="redirectToProductDetailPage(item.id)">{{item.productname}}</li>
             </ul>
         </div>
-        <ul class="menu-item">
-            <li><a routerLink="seller">sign in</a></li>
-            <li>cart(0)</li>
-        </ul>
+        <div class="menu-item">
+            <div class="signin" (click)="openSignInPopup()">
+                <a><fa-icon [icon]="loginIcon"></fa-icon> sign
+                    in</a>
+            </div>
+            <div class="cart"><a href="">Cart(0)</a> </div>
+        </div>
+        <div class="signin-option-list" *ngIf="signinPopup">
+            <ul>
+                <li><a routerLink="user-login">Buyer</a></li>
+                <li><a routerLink="seller">Seller</a></li>
+
+            </ul>
+        </div>
     </nav>
 
     <!-- this navbar will appear after seller login -->
     <nav class="nav-bar" *ngSwitchCase="'seller'">
         <h1 class="logo"><a routerLink="seller-homepage">eShop</a></h1>
-        <ul class="menu-item">
-            <li> <a routerLink="seller-add-product">Add Item</a> </li>
-            <li> {{seller_name |titlecase}} </li>
-            <li><a routerLink="">Logout</a></li>
-        </ul>
+        <div class="menu-item">
+            <div class="signin">
+                <a routerLink="seller-add-product">Add Item</a>
+            </div>
+            <div class="cart"><a>{{seller_name |titlecase}}</a> </div>
+            <div class="cart"><a routerLink="">Logout</a> </div>
+
+        </div>
     </nav>
 </div>

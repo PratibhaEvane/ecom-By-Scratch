@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Product } from '../data-type';
 import { SearchBarService } from '../home-page-service/search-bar.service';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   navUrlType: string = ''
   seller_name: string = ''
   search_product_result: undefined | Product[]
+  loginIcon = faUser
+  signinPopup: boolean = false
   constructor(private route: Router, private service: SearchBarService) { }
   // this will change the navbar on url changes
   ngOnInit(): void {
@@ -53,4 +55,9 @@ export class HeaderComponent implements OnInit {
   redirectToProductDetailPage(id: number) {
     this.route.navigate(['/details/' + id])
   }
+  // below function is created to open signin option list on click upon signin button
+  openSignInPopup() {
+    this.signinPopup = !this.signinPopup
+  }
+
 }

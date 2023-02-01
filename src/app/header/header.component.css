@@ -3,19 +3,22 @@
   justify-content: space-between;
   height: 90px;
   background-color: #5f4b8bff;
+  width: 100%;
 }
 
 .logo {
+  /* border: 1px solid red; */
+  width: 100px;
   font-family: Trebuchet MS;
-  font-size: 40px;
-  margin: 5px;
-  padding-left: 20px;
+  font-size: 30px;
+  margin-left: 50px;
+  text-align: center;
 }
 
-.logo img {
+/* .logo img {
   height: 50px;
   width: 50px;
-}
+} */
 
 .search-container {
   flex: 1;
@@ -38,7 +41,7 @@
 }
 
 .search-container button {
-  height: 44px;
+  height: 40px;
   border: 1px black solid;
   border-left: none;
   font-weight: bold;
@@ -58,16 +61,38 @@
 }
 
 .menu-item {
-  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid yellow; */
+  width: 200px;
+  margin-right: 50px;
+  padding-top: 20px;
+  font-size: 20px;
 }
 
-.menu-item li {
-  display: inline;
-  margin: 15px;
-  font-size: 20px;
+.menu-item .signin,
+.cart {
+  height: 40px;
+  width: 90px;
+  box-shadow: 1px 1px 1px 1px black;
+  text-align: center;
+}
+
+.signin-option-list {
+  position: absolute;
+  top: 65px;
+  right: 155px;
+  background-color: white;
+  width: 90px;
+  z-index: 10;
+}
+
+.signin-option-list li {
+  list-style: none;
+  margin-top: 5px;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: black
 }
