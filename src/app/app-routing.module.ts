@@ -8,6 +8,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerHomepageComponent } from './seller-homepage/seller-homepage.component';
 import { SellerProductUpdateComponent } from './seller-product-update/seller-product-update.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [{
   path: '',
@@ -39,6 +40,10 @@ const routes: Routes = [{
 {
   path: 'details/:productID',
   component: ProductDetailsComponent
+},
+{
+  path: 'user-login',
+  component: UserAuthComponent
 }
 ];
 
