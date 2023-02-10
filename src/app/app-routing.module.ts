@@ -9,13 +9,14 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerHomepageComponent } from './seller-homepage/seller-homepage.component';
 import { SellerProductUpdateComponent } from './seller-product-update/seller-product-update.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 const routes: Routes = [{
   path: '',
   component: HomePageComponent,
 },
 {
-  path: 'seller',
+  path: 'seller-auth',
   component: SellerAuthComponent
 },
 {
@@ -42,8 +43,11 @@ const routes: Routes = [{
   component: ProductDetailsComponent
 },
 {
-  path: 'user-login',
+  path: 'user-auth',
   component: UserAuthComponent
+}, {
+  path: 'user-home',
+  component: UserHomeComponent
 }
 ];
 

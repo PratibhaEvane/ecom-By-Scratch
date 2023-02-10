@@ -21,12 +21,12 @@
                 <a><fa-icon [icon]="loginIcon"></fa-icon> sign
                     in</a>
             </div>
-            <div class="cart"><a href="">Cart(0)</a> </div>
+            <div class="cart"><a>Cart(0)</a> </div>
         </div>
         <div class="signin-option-list" *ngIf="signinPopup">
             <ul>
-                <li><a routerLink="user-login">Buyer</a></li>
-                <li><a routerLink="seller">Seller</a></li>
+                <li><a routerLink="user-auth">Buyer</a></li>
+                <li><a routerLink="seller-auth">Seller</a></li>
 
             </ul>
         </div>
@@ -44,4 +44,5 @@
 
         </div>
     </nav>
+
 </div>

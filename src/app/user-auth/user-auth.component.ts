@@ -24,5 +24,12 @@ export class UserAuthComponent implements OnInit {
     this.service.onUserSignup(userSignupData);
   }
 
-  openLoginForm() { }
+  openLoginForm() {
+    this.show_user_login_form = true;
+
+  }
+  openSignupForm() {
+    this.show_user_login_form = false;
+
+  }
 }

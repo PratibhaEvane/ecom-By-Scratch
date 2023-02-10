@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     SellerProductUpdateComponent,
     SearchPageComponent,
     ProductDetailsComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
